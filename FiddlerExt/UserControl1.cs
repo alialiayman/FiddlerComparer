@@ -27,12 +27,21 @@ namespace onSoft
             var urlComparisonResult = cg.CompareUrls(_sessionsData[0].url, _sessionsData[1].url);
             dfsUrlLeft.Text = urlComparisonResult[0];
             dfsUrlRight.Text = urlComparisonResult[1];
-            dfsLeftUrlOriginal.Text = _sessionsData[0].url;
-            dfsRightUrlOriginal.Text = _sessionsData[1].url;
+            dfsUrlLeftOriginal.Text = _sessionsData[0].url;
+            dfsUrlRightOriginal.Text = _sessionsData[1].url;
 
             var headersComparisonResult = cg.CompareHeaders(_sessionsData[0].RequestHeaders, _sessionsData[1].RequestHeaders);
             dfsHeaderLeft.Text = headersComparisonResult[0];
             dfsHeaderRight.Text = headersComparisonResult[1];
+            dfsHeaderLeftOriginal.Text = cg.HeaderString(_sessionsData[0].RequestHeaders);
+            dfsHeaderRightOriginal.Text = cg.HeaderString(_sessionsData[1].RequestHeaders);
+
+
+            var bodyComparisonResult = cg.CompareUrls(_sessionsData[0].GetRequestBodyAsString(), _sessionsData[1].GetRequestBodyAsString());
+            dfsBodyLeft.Text = bodyComparisonResult[0];
+            dfsBodyRight.Text = bodyComparisonResult[1];
+            dfsBodyLeftOriginal.Text = _sessionsData[0].GetRequestBodyAsString();
+            dfsBodyRightOriginal.Text = _sessionsData[1].GetRequestBodyAsString();
 
 
         }
@@ -49,14 +58,27 @@ namespace onSoft
             e.Effect = e.Data.GetDataPresent("Fiddler.Session[]") ? DragDropEffects.Copy : DragDropEffects.None;
         }
 
+        private void btnAgain_Click(object sender, EventArgs e)
+        {
+            var cg= new Comparer();
+            var urlComparisonResult = cg.CompareUrls(dfsUrlLeft.Text, dfsUrlRight.Text);
+            dfsUrlLeft.Text = urlComparisonResult[0];
+            dfsUrlRight.Text = urlComparisonResult[1];
+            dfsUrlLeftOriginal.Text = _sessionsData[0].url;
+            dfsUrlRightOriginal.Text = _sessionsData[1].url;
+
+            var headersComparisonResult = cg.CompareHeaders(dfsHeaderLeft.Text, dfsHeaderRight.Text);
+            dfsHeaderLeft.Text = headersComparisonResult[0];
+            dfsHeaderRight.Text = headersComparisonResult[1];
+            dfsHeaderLeftOriginal.Text = cg.HeaderString(_sessionsData[0].RequestHeaders);
+            dfsHeaderRightOriginal.Text = cg.HeaderString(_sessionsData[1].RequestHeaders);
 
 
-
-
-
-
-
-
-
+            var bodyComparisonResult = cg.CompareUrls(dfsBodyLeft.Text, dfsBodyRight.Text);
+            dfsBodyLeft.Text = bodyComparisonResult[0];
+            dfsBodyRight.Text = bodyComparisonResult[1];
+            dfsBodyLeftOriginal.Text = _sessionsData[0].GetRequestBodyAsString();
+            dfsBodyRightOriginal.Text = _sessionsData[1].GetRequestBodyAsString();
+        }
     }
 }
