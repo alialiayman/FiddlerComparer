@@ -73,12 +73,30 @@ namespace onSoft
             dfsHeaderLeftOriginal.Text = cg.HeaderString(_sessionsData[0].RequestHeaders);
             dfsHeaderRightOriginal.Text = cg.HeaderString(_sessionsData[1].RequestHeaders);
 
+            if (IsJsonBody(dfsBodyLeft.Text))
+            {
+                var bodyComparisonResult = cg.CompareJsons(dfsBodyLeft.Text, dfsBodyRight.Text);
+                dfsBodyLeft.Text = bodyComparisonResult[0];
+                dfsBodyRight.Text = bodyComparisonResult[1];
+                dfsBodyLeftOriginal.Text = _sessionsData[0].GetRequestBodyAsString();
+                dfsBodyRightOriginal.Text = _sessionsData[1].GetRequestBodyAsString();
+            }
+            else
+            {
+                var bodyComparisonResult = cg.CompareUrls(dfsBodyLeft.Text, dfsBodyRight.Text);
+                dfsBodyLeft.Text = bodyComparisonResult[0];
+                dfsBodyRight.Text = bodyComparisonResult[1];
+                dfsBodyLeftOriginal.Text = _sessionsData[0].GetRequestBodyAsString();
+                dfsBodyRightOriginal.Text = _sessionsData[1].GetRequestBodyAsString();
+            }
 
-            var bodyComparisonResult = cg.CompareUrls(dfsBodyLeft.Text, dfsBodyRight.Text);
-            dfsBodyLeft.Text = bodyComparisonResult[0];
-            dfsBodyRight.Text = bodyComparisonResult[1];
-            dfsBodyLeftOriginal.Text = _sessionsData[0].GetRequestBodyAsString();
-            dfsBodyRightOriginal.Text = _sessionsData[1].GetRequestBodyAsString();
+
+        }
+
+        private bool IsJsonBody(string input)
+        {
+            if (input.Contains(":")) return true;
+            else return false;
         }
     }
 }

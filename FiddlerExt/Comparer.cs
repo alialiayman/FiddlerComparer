@@ -40,7 +40,7 @@ namespace onSoft
 
             for (int i = 0; i < left.Length; i++)
             {
-                if (left[i] == right[i])
+                if (left[i] == right[i] && right.Length > i)
                 {
                     leftResult = leftResult.Substring(1);
                     rightResult = rightResult.Substring(1);
@@ -144,6 +144,41 @@ namespace onSoft
 
             }
             return result;
+        }
+
+        public List<string> CompareJsons(string leftString, string rightString)
+        {
+            var leftArray = leftString.Split(',').ToList();
+            var rightArray = rightString.Split(',').ToList();
+            var leftResult = string.Empty;
+            var rightResult = string.Empty;
+            var leftOnly = string.Empty;
+
+            foreach (var item in leftArray)
+            {
+                var itemName = item.Split(':');
+
+                var sameInRight = rightArray.FirstOrDefault(x => x.Split(':')[0] == itemName[0]);
+                if (sameInRight == null)
+                {
+                    leftOnly += item + Environment.NewLine;
+                }
+                else
+                {
+                    if (sameInRight.Split(':')[1] != itemName[1])
+                    {
+                        leftResult += item + Environment.NewLine;
+                        rightResult += sameInRight + Environment.NewLine;
+                    }
+                    rightArray.Remove(sameInRight);
+                }
+            }
+
+            foreach (var item in rightArray)
+            {
+                rightResult += item + Environment.NewLine;
+            }
+            return new List<string> { leftResult + Environment.NewLine + leftOnly, rightResult };
         }
     }
 }
