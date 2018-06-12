@@ -45,24 +45,24 @@
             this.btnAgain = new System.Windows.Forms.Button();
             this.tabCompare = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.lblLeftBodyStats = new System.Windows.Forms.Label();
+            this.grbBodies = new System.Windows.Forms.GroupBox();
             this.lblRightBodyStats = new System.Windows.Forms.Label();
+            this.lblLeftBodyStats = new System.Windows.Forms.Label();
+            this.grbHeaders = new System.Windows.Forms.GroupBox();
+            this.grbUrl = new System.Windows.Forms.GroupBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.grbBodiesOriginal = new System.Windows.Forms.GroupBox();
+            this.grbHeadersOriginal = new System.Windows.Forms.GroupBox();
+            this.grbUrlOriginal = new System.Windows.Forms.GroupBox();
             this.tabCompare.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grbBodies.SuspendLayout();
+            this.grbHeaders.SuspendLayout();
+            this.grbUrl.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.grbBodiesOriginal.SuspendLayout();
+            this.grbHeadersOriginal.SuspendLayout();
+            this.grbUrlOriginal.SuspendLayout();
             this.SuspendLayout();
             // 
             // dfsUrlLeft
@@ -76,7 +76,7 @@
             // 
             // dfsUrlRight
             // 
-            this.dfsUrlRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dfsUrlRight.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dfsUrlRight.Location = new System.Drawing.Point(538, 17);
             this.dfsUrlRight.Name = "dfsUrlRight";
             this.dfsUrlRight.Size = new System.Drawing.Size(515, 20);
@@ -97,8 +97,7 @@
             // 
             // dfsHeaderRight
             // 
-            this.dfsHeaderRight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dfsHeaderRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dfsHeaderRight.Location = new System.Drawing.Point(538, 19);
             this.dfsHeaderRight.Multiline = true;
             this.dfsHeaderRight.Name = "dfsHeaderRight";
@@ -109,7 +108,8 @@
             // 
             // dfsBodyLeft
             // 
-            this.dfsBodyLeft.Location = new System.Drawing.Point(9, 19);
+            this.dfsBodyLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dfsBodyLeft.Location = new System.Drawing.Point(6, 19);
             this.dfsBodyLeft.Multiline = true;
             this.dfsBodyLeft.Name = "dfsBodyLeft";
             this.dfsBodyLeft.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -119,7 +119,7 @@
             // 
             // dfsBodyRight
             // 
-            this.dfsBodyRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dfsBodyRight.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dfsBodyRight.Location = new System.Drawing.Point(541, 19);
             this.dfsBodyRight.Multiline = true;
             this.dfsBodyRight.Name = "dfsBodyRight";
@@ -130,7 +130,7 @@
             // 
             // dfsBodyRightOriginal
             // 
-            this.dfsBodyRightOriginal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dfsBodyRightOriginal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dfsBodyRightOriginal.Location = new System.Drawing.Point(541, 19);
             this.dfsBodyRightOriginal.Multiline = true;
             this.dfsBodyRightOriginal.Name = "dfsBodyRightOriginal";
@@ -141,7 +141,7 @@
             // 
             // dfsBodyLeftOriginal
             // 
-            this.dfsBodyLeftOriginal.Location = new System.Drawing.Point(9, 19);
+            this.dfsBodyLeftOriginal.Location = new System.Drawing.Point(6, 19);
             this.dfsBodyLeftOriginal.Multiline = true;
             this.dfsBodyLeftOriginal.Name = "dfsBodyLeftOriginal";
             this.dfsBodyLeftOriginal.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -163,8 +163,7 @@
             // 
             // dfsHeaderRightOriginal
             // 
-            this.dfsHeaderRightOriginal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dfsHeaderRightOriginal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dfsHeaderRightOriginal.Location = new System.Drawing.Point(538, 19);
             this.dfsHeaderRightOriginal.Multiline = true;
             this.dfsHeaderRightOriginal.Name = "dfsHeaderRightOriginal";
@@ -184,7 +183,7 @@
             // 
             // dfsUrlRightOriginal
             // 
-            this.dfsUrlRightOriginal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dfsUrlRightOriginal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dfsUrlRightOriginal.Location = new System.Drawing.Point(538, 17);
             this.dfsUrlRightOriginal.Name = "dfsUrlRightOriginal";
             this.dfsUrlRightOriginal.Size = new System.Drawing.Size(515, 20);
@@ -212,12 +211,13 @@
             this.tabCompare.SelectedIndex = 0;
             this.tabCompare.Size = new System.Drawing.Size(1082, 533);
             this.tabCompare.TabIndex = 14;
+            this.tabCompare.SelectedIndexChanged += new System.EventHandler(this.tabCompare_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.grbBodies);
+            this.tabPage1.Controls.Add(this.grbHeaders);
+            this.tabPage1.Controls.Add(this.grbUrl);
             this.tabPage1.Controls.Add(this.btnAgain);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -227,106 +227,31 @@
             this.tabPage1.Text = "Differences";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // grbBodies
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.grbBodies.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.BackColor = System.Drawing.Color.PaleGreen;
-            this.groupBox3.Controls.Add(this.lblRightBodyStats);
-            this.groupBox3.Controls.Add(this.lblLeftBodyStats);
-            this.groupBox3.Controls.Add(this.dfsBodyRight);
-            this.groupBox3.Controls.Add(this.dfsBodyLeft);
-            this.groupBox3.Location = new System.Drawing.Point(6, 304);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1062, 168);
-            this.groupBox3.TabIndex = 15;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "BODIES";
+            this.grbBodies.BackColor = System.Drawing.Color.PaleGreen;
+            this.grbBodies.Controls.Add(this.lblRightBodyStats);
+            this.grbBodies.Controls.Add(this.lblLeftBodyStats);
+            this.grbBodies.Controls.Add(this.dfsBodyRight);
+            this.grbBodies.Controls.Add(this.dfsBodyLeft);
+            this.grbBodies.Location = new System.Drawing.Point(6, 304);
+            this.grbBodies.Name = "grbBodies";
+            this.grbBodies.Size = new System.Drawing.Size(1062, 168);
+            this.grbBodies.TabIndex = 15;
+            this.grbBodies.TabStop = false;
+            this.grbBodies.Text = "BODIES";
             // 
-            // groupBox2
+            // lblRightBodyStats
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.dfsHeaderLeft);
-            this.groupBox2.Controls.Add(this.dfsHeaderRight);
-            this.groupBox2.Location = new System.Drawing.Point(9, 66);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1059, 232);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "HEADERS";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.PaleGreen;
-            this.groupBox1.Controls.Add(this.dfsUrlLeft);
-            this.groupBox1.Controls.Add(this.dfsUrlRight);
-            this.groupBox1.Location = new System.Drawing.Point(9, 13);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1059, 47);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "URL";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.groupBox5);
-            this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1074, 507);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Original";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.BackColor = System.Drawing.Color.PaleGreen;
-            this.groupBox4.Controls.Add(this.dfsBodyRightOriginal);
-            this.groupBox4.Controls.Add(this.dfsBodyLeftOriginal);
-            this.groupBox4.Location = new System.Drawing.Point(3, 308);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1062, 168);
-            this.groupBox4.TabIndex = 18;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "BODIES";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox5.Controls.Add(this.dfsHeaderLeftOriginal);
-            this.groupBox5.Controls.Add(this.dfsHeaderRightOriginal);
-            this.groupBox5.Location = new System.Drawing.Point(6, 70);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1059, 232);
-            this.groupBox5.TabIndex = 17;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "HEADERS";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox6.BackColor = System.Drawing.Color.PaleGreen;
-            this.groupBox6.Controls.Add(this.dfsUrlLeftOriginal);
-            this.groupBox6.Controls.Add(this.dfsUrlRightOriginal);
-            this.groupBox6.Location = new System.Drawing.Point(6, 17);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1059, 47);
-            this.groupBox6.TabIndex = 16;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "URL";
+            this.lblRightBodyStats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRightBodyStats.AutoSize = true;
+            this.lblRightBodyStats.Location = new System.Drawing.Point(950, 154);
+            this.lblRightBodyStats.Name = "lblRightBodyStats";
+            this.lblRightBodyStats.Size = new System.Drawing.Size(107, 13);
+            this.lblRightBodyStats.TabIndex = 14;
+            this.lblRightBodyStats.Text = "0 Lines, 0 Characters";
             // 
             // lblLeftBodyStats
             // 
@@ -338,15 +263,90 @@
             this.lblLeftBodyStats.TabIndex = 13;
             this.lblLeftBodyStats.Text = "0 Lines, 0 Characters";
             // 
-            // lblRightBodyStats
+            // grbHeaders
             // 
-            this.lblRightBodyStats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRightBodyStats.AutoSize = true;
-            this.lblRightBodyStats.Location = new System.Drawing.Point(950, 152);
-            this.lblRightBodyStats.Name = "lblRightBodyStats";
-            this.lblRightBodyStats.Size = new System.Drawing.Size(107, 13);
-            this.lblRightBodyStats.TabIndex = 14;
-            this.lblRightBodyStats.Text = "0 Lines, 0 Characters";
+            this.grbHeaders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbHeaders.BackColor = System.Drawing.Color.Transparent;
+            this.grbHeaders.Controls.Add(this.dfsHeaderLeft);
+            this.grbHeaders.Controls.Add(this.dfsHeaderRight);
+            this.grbHeaders.Location = new System.Drawing.Point(9, 66);
+            this.grbHeaders.Name = "grbHeaders";
+            this.grbHeaders.Size = new System.Drawing.Size(1059, 232);
+            this.grbHeaders.TabIndex = 15;
+            this.grbHeaders.TabStop = false;
+            this.grbHeaders.Text = "HEADERS";
+            // 
+            // grbUrl
+            // 
+            this.grbUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbUrl.BackColor = System.Drawing.Color.PaleGreen;
+            this.grbUrl.Controls.Add(this.dfsUrlLeft);
+            this.grbUrl.Controls.Add(this.dfsUrlRight);
+            this.grbUrl.Location = new System.Drawing.Point(9, 13);
+            this.grbUrl.Name = "grbUrl";
+            this.grbUrl.Size = new System.Drawing.Size(1059, 47);
+            this.grbUrl.TabIndex = 14;
+            this.grbUrl.TabStop = false;
+            this.grbUrl.Text = "URL";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.grbBodiesOriginal);
+            this.tabPage2.Controls.Add(this.grbHeadersOriginal);
+            this.tabPage2.Controls.Add(this.grbUrlOriginal);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1074, 507);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Original";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // grbBodiesOriginal
+            // 
+            this.grbBodiesOriginal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbBodiesOriginal.BackColor = System.Drawing.Color.PaleGreen;
+            this.grbBodiesOriginal.Controls.Add(this.dfsBodyRightOriginal);
+            this.grbBodiesOriginal.Controls.Add(this.dfsBodyLeftOriginal);
+            this.grbBodiesOriginal.Location = new System.Drawing.Point(6, 308);
+            this.grbBodiesOriginal.Name = "grbBodiesOriginal";
+            this.grbBodiesOriginal.Size = new System.Drawing.Size(1062, 168);
+            this.grbBodiesOriginal.TabIndex = 18;
+            this.grbBodiesOriginal.TabStop = false;
+            this.grbBodiesOriginal.Text = "BODIES";
+            // 
+            // grbHeadersOriginal
+            // 
+            this.grbHeadersOriginal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbHeadersOriginal.BackColor = System.Drawing.Color.Transparent;
+            this.grbHeadersOriginal.Controls.Add(this.dfsHeaderLeftOriginal);
+            this.grbHeadersOriginal.Controls.Add(this.dfsHeaderRightOriginal);
+            this.grbHeadersOriginal.Location = new System.Drawing.Point(6, 70);
+            this.grbHeadersOriginal.Name = "grbHeadersOriginal";
+            this.grbHeadersOriginal.Size = new System.Drawing.Size(1059, 232);
+            this.grbHeadersOriginal.TabIndex = 17;
+            this.grbHeadersOriginal.TabStop = false;
+            this.grbHeadersOriginal.Text = "HEADERS";
+            // 
+            // grbUrlOriginal
+            // 
+            this.grbUrlOriginal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbUrlOriginal.BackColor = System.Drawing.Color.PaleGreen;
+            this.grbUrlOriginal.Controls.Add(this.dfsUrlLeftOriginal);
+            this.grbUrlOriginal.Controls.Add(this.dfsUrlRightOriginal);
+            this.grbUrlOriginal.Location = new System.Drawing.Point(6, 17);
+            this.grbUrlOriginal.Name = "grbUrlOriginal";
+            this.grbUrlOriginal.Size = new System.Drawing.Size(1059, 47);
+            this.grbUrlOriginal.TabIndex = 16;
+            this.grbUrlOriginal.TabStop = false;
+            this.grbUrlOriginal.Text = "URL";
             // 
             // UserControl1
             // 
@@ -361,19 +361,19 @@
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.UserControl1_DragOver);
             this.tabCompare.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grbBodies.ResumeLayout(false);
+            this.grbBodies.PerformLayout();
+            this.grbHeaders.ResumeLayout(false);
+            this.grbHeaders.PerformLayout();
+            this.grbUrl.ResumeLayout(false);
+            this.grbUrl.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.grbBodiesOriginal.ResumeLayout(false);
+            this.grbBodiesOriginal.PerformLayout();
+            this.grbHeadersOriginal.ResumeLayout(false);
+            this.grbHeadersOriginal.PerformLayout();
+            this.grbUrlOriginal.ResumeLayout(false);
+            this.grbUrlOriginal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -390,16 +390,16 @@
         private System.Windows.Forms.TabControl tabCompare;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox grbBodies;
+        private System.Windows.Forms.GroupBox grbHeaders;
+        private System.Windows.Forms.GroupBox grbUrl;
+        private System.Windows.Forms.GroupBox grbBodiesOriginal;
         private System.Windows.Forms.TextBox dfsBodyRightOriginal;
         private System.Windows.Forms.TextBox dfsBodyLeftOriginal;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox grbHeadersOriginal;
         private System.Windows.Forms.TextBox dfsHeaderLeftOriginal;
         private System.Windows.Forms.TextBox dfsHeaderRightOriginal;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox grbUrlOriginal;
         private System.Windows.Forms.TextBox dfsUrlLeftOriginal;
         private System.Windows.Forms.TextBox dfsUrlRightOriginal;
         private System.Windows.Forms.Label lblRightBodyStats;
