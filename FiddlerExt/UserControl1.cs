@@ -37,12 +37,25 @@ namespace onSoft
             dfsHeaderRightOriginal.Text = cg.HeaderString(_sessionsData[1].RequestHeaders);
 
 
-            var bodyComparisonResult = cg.CompareUrls(_sessionsData[0].GetRequestBodyAsString(), _sessionsData[1].GetRequestBodyAsString());
-            dfsBodyLeft.Text = bodyComparisonResult[0];
-            dfsBodyRight.Text = bodyComparisonResult[1];
-            dfsBodyLeftOriginal.Text = _sessionsData[0].GetRequestBodyAsString();
-            dfsBodyRightOriginal.Text = _sessionsData[1].GetRequestBodyAsString();
+            if (IsJsonBody(_sessionsData[0].GetRequestBodyAsString()))
+            {
+                var bodyComparisonResult = cg.CompareJsons(_sessionsData[0].GetRequestBodyAsString(), _sessionsData[1].GetRequestBodyAsString());
+                dfsBodyLeft.Text = DisplayJson(bodyComparisonResult[0]);
+                dfsBodyRight.Text = DisplayJson(bodyComparisonResult[1]);
+                dfsBodyLeftOriginal.Text = DisplayJson(_sessionsData[0].GetRequestBodyAsString());
+                dfsBodyRightOriginal.Text = DisplayJson(_sessionsData[1].GetRequestBodyAsString());
+            }
+            else
+            {
+                var bodyComparisonResult = cg.CompareUrls(_sessionsData[0].GetRequestBodyAsString(), _sessionsData[1].GetRequestBodyAsString());
+                dfsBodyLeft.Text = bodyComparisonResult[0];
+                dfsBodyRight.Text = bodyComparisonResult[1];
+                dfsBodyLeftOriginal.Text = _sessionsData[0].GetRequestBodyAsString();
+                dfsBodyRightOriginal.Text = _sessionsData[1].GetRequestBodyAsString();
+            }
 
+            lblLeftBodyStats.Text = dfsBodyLeft.Lines.Length + " Lines, " + dfsBodyLeft.Text.Length + "Chars";
+            lblRightBodyStats.Text = dfsBodyRight.Lines.Length + " Lines, " + dfsBodyRight.Text.Length + "Chars";
 
         }
 
@@ -76,10 +89,10 @@ namespace onSoft
             if (IsJsonBody(dfsBodyLeft.Text))
             {
                 var bodyComparisonResult = cg.CompareJsons(dfsBodyLeft.Text, dfsBodyRight.Text);
-                dfsBodyLeft.Text = bodyComparisonResult[0];
-                dfsBodyRight.Text = bodyComparisonResult[1];
-                dfsBodyLeftOriginal.Text = _sessionsData[0].GetRequestBodyAsString();
-                dfsBodyRightOriginal.Text = _sessionsData[1].GetRequestBodyAsString();
+                dfsBodyLeft.Text = DisplayJson( bodyComparisonResult[0]);
+                dfsBodyRight.Text = DisplayJson(bodyComparisonResult[1]);
+                dfsBodyLeftOriginal.Text = DisplayJson(_sessionsData[0].GetRequestBodyAsString());
+                dfsBodyRightOriginal.Text = DisplayJson(_sessionsData[1].GetRequestBodyAsString());
             }
             else
             {
@@ -91,6 +104,11 @@ namespace onSoft
             }
 
 
+        }
+
+        private string DisplayJson(string input)
+        {
+            return input.Replace(",", Environment.NewLine);
         }
 
         private bool IsJsonBody(string input)

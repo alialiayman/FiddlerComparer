@@ -40,7 +40,7 @@ namespace onSoft
 
             for (int i = 0; i < left.Length; i++)
             {
-                if (left[i] == right[i] && right.Length > i)
+                if (left[i] == right[i] && right.Length < i)
                 {
                     leftResult = leftResult.Substring(1);
                     rightResult = rightResult.Substring(1);
@@ -165,7 +165,7 @@ namespace onSoft
                 }
                 else
                 {
-                    if (sameInRight.Split(':')[1] != itemName[1])
+                    if (!sameInRight.Contains(":") || !item.Contains(":") || sameInRight.Split(':')[1] != itemName[1])
                     {
                         leftResult += item + Environment.NewLine;
                         rightResult += sameInRight + Environment.NewLine;

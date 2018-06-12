@@ -11,4 +11,3 @@ C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\Xceed.Compression.v5.4.dll
 C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\Fiddler.pdb
 C:\Projects\onFiddlerCompare\FiddlerExt\obj\Debug\onFiddlerCompare.dll
 C:\Projects\onFiddlerCompare\FiddlerExt\obj\Debug\onFiddlerCompare.pdb
-C:\Projects\onFiddlerCompare\FiddlerExt\obj\Debug\onFiddlerCompare.csprojResolveAssemblyReference.cache
