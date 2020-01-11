@@ -3,11 +3,8 @@ C:\Projects\onFiddlerCompare\FiddlerExt\obj\Debug\onFiddlerCompare.csproj.Genera
 C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\onFiddlerCompare.dll
 C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\onFiddlerCompare.pdb
 C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\Fiddler.exe
-C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\Telerik.Analytics.dll
-C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\Xceed.Zip.v5.4.dll
-C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\Xceed.FileSystem.v5.4.dll
-C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\Xceed.Compression.Formats.v5.4.dll
-C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\Xceed.Compression.v5.4.dll
-C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\Fiddler.pdb
 C:\Projects\onFiddlerCompare\FiddlerExt\obj\Debug\onFiddlerCompare.dll
 C:\Projects\onFiddlerCompare\FiddlerExt\obj\Debug\onFiddlerCompare.pdb
+C:\Projects\onFiddlerCompare\FiddlerExt\obj\Debug\onFiddlerCompare.csproj.CoreCompileInputs.cache
+C:\Projects\onFiddlerCompare\FiddlerExt\obj\Debug\onFiddlerCompare.csproj.CopyComplete
+C:\Projects\onFiddlerCompare\FiddlerExt\bin\Debug\onFiddlerCompare.dll.config
